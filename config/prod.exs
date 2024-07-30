@@ -13,7 +13,7 @@ config :logger, level: :info
 # of environment variables, is done on config/runtime.exs.
 
 config :check_school, CheckSchoolWeb.Endpoint,
-  url: [host: "127.0.0.1", port: 4000],
+  url: [host: "127.0.0.1", port: 5088],
   cache_static_manifest: "priv/static/cache_manifest.json",
   check_origin: false,
   server: true
