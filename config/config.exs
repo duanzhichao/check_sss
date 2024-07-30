@@ -7,19 +7,15 @@
 # General application configuration
 import Config
 
-config :check_school,
-  generators: [timestamp_type: :utc_datetime]
-
 # Configures the endpoint
 config :check_school, CheckSchoolWeb.Endpoint,
   url: [host: "localhost"],
-  adapter: Bandit.PhoenixAdapter,
   render_errors: [
-    formats: [json: CheckSchoolWeb.ErrorJSON],
+    formats: [html: CheckSchoolWeb.ErrorHTML, json: CheckSchoolWeb.ErrorJSON],
     layout: false
   ],
   pubsub_server: CheckSchool.PubSub,
-  live_view: [signing_salt: "QF0luZ4Q"]
+  live_view: [signing_salt: "liWZIYlD"]
 
 # Configures the mailer
 #

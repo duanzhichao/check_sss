@@ -18,7 +18,7 @@ import Config
 #     """
 
 config :check_school, CheckSchoolWeb.Endpoint,
-  http: [ip: {0, 0, 0, 0}, port: 5088],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   secret_key_base: "02kWiRb2hX1WLfm4/EfLCQHOWe/w0w2QVCSXkOgXJSxtA7lOZvehTUHTmykFemqd"
 
 # ## Using releases (Elixir v1.9+)

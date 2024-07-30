@@ -4,7 +4,7 @@ import Config
 # you can enable the server option below.
 config :check_school, CheckSchoolWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "coY5T3psuRACCLRDAXgizlPjf9yEvzZCXlvQFdwcUVFvyALOXuAJ7hin0GKZKJQV",
+  secret_key_base: "L7I35fkIChEG96mOgOua974E46JtdKvr7v/8DhrKHU0AVlzftvdIb1rEVyw4mmjj",
   server: false
 
 # In test we don't send emails.

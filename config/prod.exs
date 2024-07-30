@@ -12,8 +12,9 @@ config :logger, level: :info
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.
 
+
 config :check_school, CheckSchoolWeb.Endpoint,
-  url: [host: "127.0.0.1", port: 5088],
+  url: [host: "127.0.0.1", port: 4000],
   cache_static_manifest: "priv/static/cache_manifest.json",
   check_origin: false,
   server: true

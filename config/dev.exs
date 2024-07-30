@@ -7,12 +7,13 @@ import Config
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
 config :check_school, CheckSchoolWeb.Endpoint,
-  http: [ip: {0, 0, 0, 0}, port: 5088],
-  protocol_options: [max_request_line_length: 10_000_000],
+  # Binding to loopback ipv4 address prevents access from other machines.
+  # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
+  http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "9ALGysxy5lnymIRRolfYbfsvDcwETnlah6OofeHLW/EPIadPjja9WPTx8dB+EQw2",
+  secret_key_base: "tJnBq2F7+Ji2OoTKmaz0DS9xauL3YwDFdiX2h9nyr+NhLnNrN3uktAKA3nbSK0Qs",
   watchers: []
 
 # ## SSL Support
@@ -37,6 +38,16 @@ config :check_school, CheckSchoolWeb.Endpoint,
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
+
+# Watch static and templates for browser reloading.
+config :check_school, CheckSchoolWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/gettext/.*(po)$",
+      ~r"lib/check_school_web/(controllers|live|components)/.*(ex|heex)$"
+    ]
+  ]
 
 # Enable dev routes for dashboard and mailbox
 config :check_school, dev_routes: true
