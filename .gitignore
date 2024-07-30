@@ -1,0 +1,10 @@
+/_build
+/cover
+/deps
+erl_crash.dump
+*.ez
+*.beam
+.ash_history
+.DS_Store
+.elixir_ls
+.gitattributes
